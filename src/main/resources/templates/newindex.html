@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>你好，世界</title>
+
+    <!-- Fav Icons -->
+    <link rel="shortcut icon" th:href="@{/images/favicon.png}" type="image/x-icon">
+    <!--link  th:href="@{/images/hero.png}" rel="shortcut icon"  type="image/x-icon"-->
+    <!--   Fonts -->
+    <link th:href="@{/css/0b00874995f34999976323cd7cb8e94c.css}" rel="stylesheet">
+    <link th:href="@{/css/all.css}" rel="stylesheet" >
+
+    <!-- Stylesheets -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" >
+    <link th:href="@{/css/magnific-popup.css}" rel="stylesheet" >
+    <link th:href="@{/css/owl.css}" rel="stylesheet" >
+    <link th:href="@{/css/leaflet.css}" rel="stylesheet" >
+    <link th:href="@{/css/nice-select.css}" rel="stylesheet" >
+    <link th:href="@{/css/animate.min.css}" rel="stylesheet" >
+    <link th:href="@{/css/spacing.min.css}" rel="stylesheet" >
+    <link th:href="@{/css/menu.css}" rel="stylesheet" >
+    <link th:href="@{/css/style.css}" rel="stylesheet" >
+    <link th:href="@{/css/responsive.css}" rel="stylesheet" >
+
+    <!--[if lt IE 9]><script th:src="@{/js/html5shiv.js}"></script><![endif]-->
+
+</head>
+
+<body>
+<div class="page-wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
+
+    <!--====================================================================
+       Start Header area
+    =====================================================================-->
+    <header class="main-header">
+
+        <!-- header top -->
+        <div class="header-top">
+            <div class="container">
+                <div class="top-inner">
+                    <div class="logo-outer">
+                        <div class="logo"><a th:href="@{index.html}"><img th:src="@{/picture/logo.png}" alt="Logo"></a></div>
+                    </div>
+
+                    <ul class="header-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h6><span>地址:</span>
+                                上海市普陀区中山北路460号华东师范大学</h6>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <h6><span>联系方式:</span>
+                                +86 15984412626</h6>
+                        </li>
+                    </ul>
+
+                    <div class="languages">
+                        <select name="languages" id="languages">
+                            <option value="lang-1">中文</option>
+                            <option value="lang-2">English</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Header-Upper-->
+        <div class="header-upper">
+            <div class="container clearfix">
+
+                <div class="header-inner">
+
+                    <div class="nav-outer clearfix">
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-lg">
+                            <div class="navbar-header clearfix">
+                                <!-- Toggle Button -->
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li ><a th:href="@{index.html}">主页</a></li>
+                                    <li class="current"><a th:href="@{property.html}">诗人</a></li>
+                                    <li><a th:href="@{services.html}">诗词</a></li>
+                                    <li><a th:href="@{about.html}">关于</a></li>
+                                    <li><a th:href="@{blog.html}">博客</a></li>
+                                    <li><a th:href="@{contact.html}">联系我们</a></li>
+                                </ul>
+                            </div>
+
+                        </nav>
+                        <!-- Main Menu End-->
+                    </div>
+
+                    <div class="menu-icons">
+                        <!-- Menu Serch Box-->
+                        <div class="nav-search ml-15">
+                            <button class="fa fa-search"></button>
+                            <form th:action="@{#}" class="hide">
+                                <input type="text" placeholder="搜索" class="searchbox" required="">
+                                <button type="submit" class="searchbutton fa fa-search"></button>
+                            </form>
+                        </div>
+
+                        <!-- menu sidbar -->
+                        <div class="menu-sidebar">
+                            <button>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!--End Header Upper-->
+
+    </header>
+    <!--====================================================================
+       End Header area
+    =====================================================================-->
+
+    <!--Form Back Drop-->
+    <div class="form-back-drop"></div>
+
+    <!-- Hidden Sidebar -->
+    <section class="hidden-bar">
+        <div class="inner-box text-center">
+            <div class="cross-icon"><span class="fa fa-times"></span></div>
+            <div class="title">
+                <h3>Get Appointment</h3>
+            </div>
+
+            <!--Appointment Form-->
+            <div class="appointment-form">
+                <form method="post" th:action="@{contact.html}">
+                    <div class="form-group">
+                        <input type="text" name="text" value="" placeholder="姓名" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" value="" placeholder="邮箱" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="phone" value="" placeholder="电话" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="信息" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="提交" class="theme-btn">Submit now</button>
+                    </div>
+                </form>
+            </div>
+
+            <!--Social Icons-->
+            <div class="social-icons">
+                <a th:href="@{#}"><i class="fab fa-twitter"></i></a>
+                <a th:href="@{#}"><i class="fab fa-facebook-f"></i></a>
+                <a th:href="@{#}"><i class="fab fa-instagram"></i></a>
+                <a th:href="@{#}"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+        </div>
+    </section>
+    <!--End Hidden Sidebar -->
+
+
+    <!--====================================================================
+        Start Hero Section
+    =====================================================================-->
+    <section class="hero-section text-center mt-210 rmt-70" th:style="'background:url(' + '/images/ppp.png' + ')'">
+        <div class="container">
+            <div class="hero-content">
+
+
+                <h6 th:th:each="user:${user}" th:utext="${user}">h</h6>
+
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--====================================================================
+        End Hero Section
+    =====================================================================-->
+
+
+
+    <!--====================================================================
+        Start WordPress Section
+    =====================================================================-->
+    删
+    <!--====================================================================
+        End WordPress Section
+    =====================================================================-->
+
+
+
+    <!--====================================================================
+        Start Services Section
+    =====================================================================-->
+
+    <!--====================================================================
+        End Services Section
+    =====================================================================-->
+
+
+
+    <!--====================================================================
+        Start Video Section
+    =====================================================================-->
+
+    <!--====================================================================
+        End Video Section
+    =====================================================================-->
+
+
+
+    <!--====================================================================
+        Start Client Section
+    =====================================================================-->
+    删
+
+    <!--====================================================================
+        End Client Section
+    =====================================================================-->
+
+
+
+    <!--====================================================================
+        Start Restaurants Section
+    =====================================================================-->
+
+    <!--====================================================================
+        End Restaurants Section
+    =====================================================================-->
+
+
+
+    <!--====================================================================
+        Start Apartment Section
+    =====================================================================-->
+
+    <!--====================================================================
+        End Apartment Section
+    =====================================================================-->
+
+
+    <!--====================================================================
+        Start Success Section
+    =====================================================================-->
+    删
+    <!--====================================================================
+        End Success Section
+    =====================================================================-->
+
+
+
+    <!--====================================================================
+        Start FAQ Section
+    =====================================================================-->
+
+    <!--====================================================================
+        End FAQ Section
+    =====================================================================-->
+
+
+
+    <!--====================================================================
+        Start Contact Section
+    =====================================================================-->
+
+    <!--====================================================================
+        End Contact Section
+    =====================================================================-->
+
+
+
+
+    <!--====================================================================
+        Start Call To Action Section
+    =====================================================================-->
+
+    <!--====================================================================
+        End Call To Action Section
+    =====================================================================-->
+
+
+
+    <!--====================================================================
+       Start Footer Section
+    =====================================================================-->
+
+    <!-- Footer Bottom Area-->
+    <div class="footer-bottom mt-55">
+        <div class="container">
+            <div class="bottom-inner">
+                <div class="social-icons">
+                    <a th:href="@{#}"><i class="fab fa-twitter"></i></a>
+                    <a th:href="@{#}"><i class="fab fa-facebook-f"></i></a>
+                    <a th:href="@{#}"><i class="fab fa-instagram"></i></a>
+                    <a th:href="@{#}"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+                <div class="copyright">
+                    <p>Copyright &copy; 2021.Company name All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </footer>
+    <!--====================================================================
+       End Footer Section
+    =====================================================================-->
+
+</div>
+<!--End pagewrapper-->
+
+
+<!-- Scroll Top Button -->
+<button class="scroll-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></button>
+
+
+<!-- jequery plugins -->
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/jquery.nice-select.min.js}"></script>
+<script th:src="@{/js/jquery.magnific-popup.min.js}"></script>
+<script th:src="@{/js/leaflet.min.js}"></script>
+<script th:src="@{/js/leaflet-tilelayer-colorfilter.min.js}"></script>
+<script th:src="@{/js/owl.js}"></script>
+<script th:src="@{/js/wow.js}"></script>
+<script th:src="@{/js/appear.js}"></script>
+
+<!-- Custom script -->
+<script th:src="@{/js/script.js}"></script>
+
+</body>
+
+</html>
